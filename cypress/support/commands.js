@@ -1,7 +1,12 @@
-Cypress.Commands.add('fillMandatoryFieldsAndSubmit', () => {
-    cy.get('#firstName').type('Beatriz').should('have.value', 'Beatriz')
-    cy.get('#lastName').type('Cunha').should('have.value', 'Cunha')
-    cy.get('#email').type('bia@gmail.com').should('have.value', 'bia@gmail.com')
-    cy.get('#open-text-area').type('Teste').should('have.value', 'Teste')
-    cy.get('button').click()
+Cypress.Commands.add('fillMandatoryFieldsAndSubmit', (data = {
+    firstName: 'Lorena',
+    lastName: 'Lima',
+    email: 'lorena@gmail.com',
+    text: 'sou lorena'
+}) => {
+    cy.get('#firstName').type(data.firstName).should('have.value', data.firstName)
+    cy.get('#lastName').type(data.lastName).should('have.value', data.lastName)
+    cy.get('#email').type(data.email).should('have.value', data.email)
+    cy.get('#open-text-area').type(data.text).should('have.value', data.text)
+    cy.contains('button', 'Enviar').click()
 })
