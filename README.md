@@ -1,28 +1,61 @@
-# 🌲 Cypress, do Zero à Nuvem ☁️
+# 📦 POC-CYPRESS
 
-👋 Seja bem-vindo(a)!
+Projeto de testes automatizados com **Cypress**, desenvolvido como parte do curso **"Cypress, do Zero à Nuvem"** da [Escola Talking About Testing](https://talkingabouttesting.courses/).
 
-É muito bom tê-lo(a) aqui. Tenho certeza que você vai amar esse curso. ❤️
+> 🔬 Repositório educacional com foco em testes end-to-end, boas práticas com Cypress, execução local e na nuvem.
 
-## O que você vai aprender?
+---
 
-- Como configurar um projeto Cypress do zero
-- Como visitar páginas locais e remotas
-- Como lidar com os elementos mais comuns encontrados em aplicações web
-- Como testar upload de arquivos
-- Como realizar as mais diversas verificações de resultados esperados
-- Como criar comandos customizados
-- Como lidar com links que abrem em outra aba do navegador
-- Como rodar testes simulando as dimensões de um dispositivo móvel
-- Como resolver os mesmos problemas de diferentes formas, conhecendo a [API do Cypress](https://docs.cypress.io/api/table-of-contents)
-- Como criar uma documentação mínima para seu projeto de testes automatizados
-- Como executar os testes em um _workflow_ de integração contínua sempre que mudanças ocorrerem no código da aplicação (ou dos testes)
-- Como integrar seu _workflow_ de integração contínua com o Cypress Cloud (o serviço de gestão de testes do Cypress na nuvem)
+## 📑 Descrição
 
-## Vamos começar?
+Este projeto tem como objetivo aplicar na prática os conceitos aprendidos no curso, incluindo:
 
-Vá para a seção [estrutura do curso](./lessons/_course-structure_.md).
+- Escrita de testes automatizados com Cypress
+- Execução local e mobile
+- Execução em CI/CD, Github Actions
+- Integração com o Cypress Cloud
+- Documentação
+- Cypress Avançado
 
-___
+## 🧪 Como rodar?
 
-Este é um curso da **Escola Talking About Testing**.
+Execute os testes com os seguintes comandos:
+
+| Comando                | Descrição                                              |
+|------------------------|--------------------------------------------------------|
+| `npm run cy:open`      | Abre o Cypress em modo interativo (desktop)           |
+| `npm run cy:open:mobile` | Abre o Cypress com viewport mobile (410x860)        |
+| `npm test`             | Executa os testes em modo headless                    |
+| `npm run test:mobile`  | Executa testes em modo headless com viewport mobile   |
+
+---
+
+## 📲 Requisitos
+
+- [Node.js](https://nodejs.org/) na versão 23.7.0
+- [npm](https://www.npmjs.com/)
+- [Cypress](https://www.cypress.io/)
+
+Instale as dependências com:
+
+```bash
+npm install
+```
+
+## ☁️ Cypress Cloud
+
+Este projeto pode ser integrado ao [Cypress Cloud](https://www.cypress.io/cloud/) para executar os testes em ambiente de nuvem, com visualização detalhada dos resultados e integração com pipelines.
+
+---
+
+## 📘 Curso
+
+Este repositório segue os exercícios e boas práticas ensinadas no curso:
+
+**Cypress, do Zero à Nuvem** — por [Walmyr Filho](https://walmyr.dev/)
+
+---
+
+## 📄 Licença
+
+Este projeto está licenciado sob a [Licença MIT](LICENSE).
