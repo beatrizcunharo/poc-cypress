@@ -125,4 +125,21 @@ describe('Central de Atendimento ao Cliente TAT', () => {
     cy.contains('a', 'Política de Privacidade').invoke('removeAttr', 'target').click()
     cy.contains('h1', 'CAC TAT - Política de Privacidade').should('be.visible')
   })
+
+  it('preenche os campos obrigatórios e envia o formulário - clock', () => {
+    cy.clock()
+
+    const textArea = Cypress._.repeat('Quero ajuda,', 10)
+
+    cy.get('#firstName').type('Beatriz').should('have.value', 'Beatriz')
+    cy.get('#lastName').type('Cunha').should('have.value', 'Cunha')
+    cy.get('#email').type('bia@gmail.com').should('have.value', 'bia@gmail.com')
+    cy.get('#open-text-area').type(textArea, { delay: 20 })
+    cy.get('button').click()
+    cy.get('.success').should('be.visible')
+
+    cy.tick(3000)
+
+    cy.get('.success').should('not.be.visible')
+  })
 })
